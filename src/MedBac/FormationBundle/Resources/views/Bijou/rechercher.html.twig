@@ -1,0 +1,38 @@
+{% extends "MedBacFormationBundle::layout.html.twig" %}
+ 
+
+ {%block product%}
+             {% for entity in bijou %}
+              <li> <a href="detail.html"><img src="{{ asset('bundles/medbacformation/bijou/'~entity.path)}}" alt="" width="109" height="101" border="0" /></a>
+               <h6 class="colr">{{entity.titre}} </h6>
+              <div><span>{% for Genre in entity.listeDesGenres %}{% if loop.index > 1 %},
+{% endif %} {{ Genre.libelle }}{% endfor %}</span></div>
+               <p class="price"><h3>{{entity.prix}} Dt</h3></p>
+      
+              </li>
+              {%endfor%} 
+ {%endblock%}
+{%block content%}
+<div  style=" height:650px" class="cont_center">
+    <center><h2>Formulaire de Recherche</h2></center><br>
+    
+    <form action="{{ path('recherche') }}" method="post" {{ form_enctype(form) }} class="well-sm">
+  {{form_widget(form._token)}}
+  
+   <a> {{ form_errors(form) }}</a>
+  
+               <div style="text-align: left"class="form-group">
+                {{ form_label(form.quantite,"Mot Cles :") }}
+                {{ form_errors(form.quantite) }}
+                {{ form_widget(form.quantite, { 'attr': {'placeholder': "Entrer votre recherche"} }) }}
+                </div>
+    <div>
+       <center> <input type="submit" class="btn btn-primary btn-success pull-right"/>
+       </center></div> 
+     </form>
+            </div>  
+        
+        
+        
+  
+ {%endblock%}

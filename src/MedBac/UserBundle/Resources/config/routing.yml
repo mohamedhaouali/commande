@@ -1,0 +1,6 @@
+medbac_user_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: MedbacUserBundle:Default:index }
+fos_user_security_logout:
+    pattern:  /logout
+    defaults: { _controller: MedbacUserBundle:Security:logout }

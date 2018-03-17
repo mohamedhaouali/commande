@@ -1,0 +1,23 @@
+{% extends "MedBacFormationBundle::layout.html.twig" %}
+{%block product%}
+             {% for entity in bijou %}
+              <li> <a href="detail.html"><img src="{{ asset('bundles/medbacformation/bijou/'~entity.path)}}" alt="" width="109" height="101" border="0" /></a>
+               <h6 class="colr">{{entity.titre}} </h6>
+              <div><span>{% for Genre in entity.listeDesGenres %}{% if loop.index > 1 %},
+{% endif %} {{ Genre.libelle }}{% endfor %}</span></div>
+               <p class="price"><h3>{{entity.prix}} Dt</h3></p>
+      
+              </li>
+              {%endfor%} 
+ {%endblock%}
+{%block content%}
+<div  style=" height:500px" class="cont_center">
+    <center><h2>Payement du Produit en ligne</h2></center><br>
+<form action="{{path('panier')}}" method="post" class="well-sm">
+<center>Card number : <input placeholder="**** **** **** ****" type="text" name="identifiant" classe="form-control input sm" >
+ Expires : <input placeholder="mm/yy"type="text" name="identifiant" clsse="form-control input sm">
+ <br><br>Name on card : <input placeholder="Name Card" type="text" name="identifiant" classe="form-control input sm">
+  Card code : <input placeholder="CVC" type="text" name="identifiant" classe="form-control input sm">
+  <br><br><input name="valider" type="submit" value="Payement"></center></form>
+</div> 
+ {%endblock%}

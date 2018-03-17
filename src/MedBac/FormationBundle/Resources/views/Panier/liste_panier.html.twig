@@ -1,0 +1,57 @@
+{% extends "MedBacFormationBundle::layout.html.twig" %}
+ 
+
+ {%block product%}
+             {% for entity in bijou %}
+              <li> <a href="detail.html"><img src="{{ asset('bundles/medbacformation/bijou/'~entity.path)}}" alt="" width="109" height="101" border="0" /></a>
+               <h6 class="colr">{{entity.titre}} </h6>
+              <div><span>{% for Genre in entity.listeDesGenres %}{% if loop.index > 1 %},
+{% endif %} {{ Genre.libelle }}{% endfor %}</span></div>
+               <p class="price"><h3>{{entity.prix}} Dt</h3></p>
+      
+              </li>
+              {%endfor%} 
+ {%endblock%}
+{%block content%}
+<div  style=" height:650px" class="cont_center">
+    <center><h2>Liste de Votre Panier</h2></center><br>
+    <center>
+                    <table class="table table-hover table-responsive table-bordered" style="margin-top:70px;">
+        <thead>
+            <tr>
+                 <th>Libelle Bijoux</th>
+                 <th>Quantité Restante</th>
+                
+                <th>commander</th>
+                <th>Supprimer</th>
+               
+             </tr>
+        </thead>
+        <tbody>
+ {% for entity in panier.currentPageResults %}
+ <tr>
+             <td>{{ entity.bijou.titre }}</td>
+             <td>{{ entity.bijou.quantite }}  </td>
+             <td> {% if entity.bijou.quantite>0 %}   <a href="{{path('commander',{ 'id': entity.id })}}"><center><img src="{{ asset('bundles/medbacformation/images/commander.jpg') }}" alt="" width="52" height="26" border="0" class="add_to_cart" /></center></a>
+              {%elseif entity.bijou.quantite==0%}Stock est fini {%endif%}</td>
+              <td>       <a href="{{path('panier_supprimer',{ 'id': entity.id })}}"><center><img src="{{ asset('bundles/medbacformation/images/c7.png') }}" alt="" width="42" height="26" border="0" class="add_to_cart" onclick="return confirm('Etes vous sur de vouloir supprimer cet produit de votre panier?');" /></center></a>
+              </td>
+ </tr>
+                {% else %}
+        <li>Aucun Produit trouvé.</li>
+{%endfor%}
+            </tbody>
+    </table> </center>
+            <div class="pagerfanta pull-right" ><br><br><br><br>
+                <center>{{ pagerfanta(panier,'default_translated') }}</center>
+        </div>
+   
+    
+    
+    
+            </div>  
+        
+        
+        
+  
+ {%endblock%}

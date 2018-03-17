@@ -1,0 +1,17 @@
+parameters:
+#    med_bac_formation.example.class: MedBac\FormationBundle\Example
+
+services:
+#    med_bac_formation.example:
+#        class: %med_bac_formation.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+     med_bac_formation.registration.form.type:
+         class: MedBac\FormationBundle\Form\Type\RegistrationFormType
+         arguments: [%fos_user.model.user.class%,%security.role_hierarchy.roles%]
+         tags:
+            - { name: form.type, alias: med_bac_formation_registration }
+     authentication_handler:
+         class: MedBac\FormationBundle\Handler\AuthenticationHandler
+         arguments:  ['@router',' @security.context']
+         tags:
+            - { name: 'monolog.logger', channel: 'security' }        

@@ -1,0 +1,331 @@
+[b]############################## | UsbFix V 9.046 | [Nettoyage][/b]
+
+Utilisateur: Mohamed (Administrateur) # KINGLUI-81-PRO
+Mis à jour le 30/04/2017 par SOSVirus
+Lancé à 23:21:35 | 13/05/2017
+
+Site Web : [url=https://www.usb-antivirus.com/fr/]https://www.usb-antivirus.com/fr/[/url]
+Tutoriel : [url=https://www.sosvirus.net/tutoriel-usbfix/]https://www.sosvirus.net/tutoriel-usbfix/[/url]
+Assistance : [url=https://www.sosvirus.net/]https://www.sosvirus.net/[/url]
+Détection en Live : [url=http://www.sosmalware.com/fr/usbfix/]http://www.sosmalware.com/fr/usbfix/[/url]
+Contact : [url=https://www.usb-antivirus.com/fr/contact/]https://www.usb-antivirus.com/fr/contact/[/url]
+
+[b]################## | System information |[/b]
+
+MB: ASUSTeK COMPUTER INC. (X550CC) 
+CPU: Intel(R) Core(TM) i5-3337U CPU @ 1.80GHz
+GC: Intel(R) HD Graphics 4000
+RAM -> [Total : 6030 Mo | Free : 3919 Mo]
+Bios: American Megatrends Inc.
+Boot: Normal boot
+
+OS: Microsoft™ Windows 8.1 Pro (6.3.9600 64-Bit) 
+WB: Internet Explorer : 11.00.9600.16384
+WB: Google Chrome : 58.0.3029.110
+WB: Mozilla Firefox : 53.0.2
+
+[b]################## | Security Information |[/b]
+
+AV: Avast Antivirus [Actif |A jour]
+AV: Windows Defender [[b](!) Désactivé[/b] |A jour]
+AS: Windows Defender [[b](!) Désactivé[/b] |A jour]
+AS: Avast Antivirus [Actif |A jour]
+FW: Windows Firewall [Actif]
+SC: Security Center [Actif]
+WU: Windows Update [Actif]
+
+[b]################## | Disk Information |[/b]
+
+C:\ (%SystemDrive%) -> Disque fixe # 343 Go (301 Go libre(s) - 88%) [] # NTFS
+D:\ -> Disque fixe # 146 Go (128 Go libre(s) - 88%) [java/j2ee+Android] # NTFS
+E:\ -> Disque fixe # 137 Go (55 Go libre(s) - 40%) [cours] # NTFS
+F:\ -> Disque fixe # 29 Go (19 Go libre(s) - 64%) [logiciels] # NTFS
+G:\ -> Disque fixe # 29 Go (15 Go libre(s) - 52%) [Symfony] # NTFS
+I:\ -> Disque fixe # 350 Mo (128 Mo libre(s) - 37%) [Réservé au système] # NTFS
+J:\ -> Disque fixe # 14 Go (2 Go libre(s) - 17%) [Formation] # NTFS
+
+[b]################## | Recherche générique |[/b]
+
+
+[b]################## | Startup |[/b]
+
+F2 - HKLM\..\Winlogon : [Shell] explorer.exe
+F2 - [x64] HKLM\..\Winlogon : [Shell] explorer.exe
+F2 - HKLM\..\Winlogon : [Userinit] userinit.exe
+F2 - [x64] HKLM\..\Winlogon : [Userinit] C:\Windows\system32\userinit.exe,
+04 - HKCU\..\Run : [IDMan] C:\Program Files (x86)\Internet Download Manager\IDMan.exe /onboot
+04 - HKLM\..\Run : [SunJavaUpdateSched] "C:\Program Files (x86)\Common Files\Java\Java Update\jusched.exe"
+04 - [x64] HKLM\..\Run : [IgfxTray] C:\Windows\system32\igfxtray.exe
+04 - [x64] HKLM\..\Run : [HotKeysCmds] C:\Windows\system32\hkcmd.exe
+04 - [x64] HKLM\..\Run : [Persistence] C:\Windows\system32\igfxpers.exe
+04 - [x64] HKLM\..\Run : [RTHDVCPL] C:\Program Files\Realtek\Audio\HDA\RAVCpl64.exe -s
+04 - [x64] HKLM\..\Run : [AvastUI.exe] "C:\Program Files\AVAST Software\Avast\AvLaunch.exe" /gui
+04 - HKU\S-1-5-21-628878122-2061983401-3578955743-1003\..\Run : [IDMan] C:\Program Files (x86)\Internet Download Manager\IDMan.exe /onboot
+04 - HKU\S-1-5-18\..\Run : [Skype] "C:\Program Files (x86)\Skype\Phone\Skype.exe" /minimized /regrun
+
+[b]################## | C:\ %SystemDrive% - Disque Fixe (NTFS) |[/b]
+
+[15/06/2016 - 15:10:06 | A | 0 Ko] - C:\HaxLogs.txt
+[17/01/2017 - 01:19:26 | A | 1 Ko] - C:\AiOLog.txt
+[26/07/2012 - 07:52:25 | A | 0 Ko] - C:\config.sys
+[21/06/2014 - 00:25:55 | RASH | 0 Ko] - C:\MSDOS.SYS
+[21/06/2014 - 00:25:55 | RASH | 0 Ko] - C:\IO.SYS
+[13/05/2017 - 22:22:28 | ASH | 1245184 Ko] - C:\pagefile.sys
+[13/05/2017 - 22:22:28 | ASH | 262144 Ko] - C:\swapfile.sys
+[19/12/2013 - 12:58:40 | A | 2048 Ko] - C:\M5A78L-M-LX-ASUS-1603.ROM
+[25/02/2014 - 11:47:36 | A | 1 Ko] - C:\.rnd
+[10/05/2017 - 17:47:52 | D] - C:\Config.Msi
+[17/01/2017 - 15:55:13 | A | 0 Ko] - C:\setup.log
+[17/01/2017 - 16:15:01 | A | 2 Ko] - C:\RHDSetup.log
+[28/11/2012 - 05:10:40 | A | 1 Ko] - C:\setup.iss
+[29/09/2016 - 10:12:38 | A | 0 Ko] - C:\AVScanner.ini
+[30/08/2016 - 16:13:26 | A | 0 Ko] - C:\.gitignore
+[13/05/2017 - 22:59:44 | D] - C:\.git
+[31/07/2015 - 15:42:20 | A | 630 Ko] - C:\SecurityScanner.dll
+[17/01/2017 - 13:01:35 | SHD] - C:\$RECYCLE.BIN
+[26/07/2012 - 07:52:25 | A | 0 Ko] - C:\autoexec.bat
+[17/01/2017 - 13:07:54 | D] - C:\apache-tomcat-8.0.36
+[18/06/2013 - 13:18:29 | N | 0 Ko] - C:\BOOTNXT
+[22/08/2013 - 15:45:52 | SHD] - C:\Documents and Settings
+[22/08/2013 - 16:22:35 | D] - C:\PerfLogs
+[05/12/2013 - 14:50:53 | D] - C:\Intel
+[02/04/2014 - 23:07:53 | D] - C:\OETemp
+[21/11/2014 - 09:13:42 | RASH | 395 Ko] - C:\bootmgr
+[19/09/2015 - 12:03:22 | A | 0 Ko] - C:\Cookies
+[06/10/2015 - 12:37:27 | D] - C:\preload64
+[13/10/2015 - 00:43:56 | D] - C:\preload
+[22/10/2015 - 15:24:12 | D] - C:\eSupport
+[21/02/2016 - 18:13:08 | D] - C:\Spacekace
+[27/04/2016 - 06:48:20 | D] - C:\Logs
+[15/06/2016 - 17:32:44 | RHD] - C:\MSOCache
+[15/06/2016 - 23:21:10 | D] - C:\Log
+[16/01/2017 - 19:48:56 | D] - C:\XEClient
+[17/01/2017 - 10:26:09 | SHD] - C:\Recovery
+[17/01/2017 - 16:09:29 | RD] - C:\Users
+[04/02/2017 - 10:40:43 | D] - C:\wamp
+[18/03/2017 - 16:26:40 | D] - C:\temp
+[19/04/2017 - 11:14:13 | A | 229 Ko] - C:\qualif
+[20/04/2017 - 19:14:26 | RD] - C:\Program Files
+[06/05/2017 - 21:40:26 | D] - C:\UsbFix
+[10/05/2017 - 17:47:50 | RD] - C:\Program Files (x86)
+[11/05/2017 - 22:19:32 | D] - C:\Windows
+[13/05/2017 - 10:11:07 | D] - C:\AdwCleaner
+[13/05/2017 - 14:34:01 | HD] - C:\ProgramData
+
+[b]################## | D:\ - Disque Fixe (NTFS) |[/b]
+
+[19/02/2014 - 18:11:54 | N | 686 Ko] - D:\libeay32.zip
+[08/06/2016 - 21:59:26 | N | 282244 Ko] - D:\eclipse-jee-mars-2-win32-x86_64.zip
+[23/10/2016 - 22:31:42 | A | 1 Ko] - D:\Environnement.txt
+[24/12/2016 - 22:43:03 | A | 0 Ko] - D:\mot de passe.txt
+[31/12/2016 - 13:02:06 | A | 0 Ko] - D:\tanit job .txt
+[11/01/2017 - 18:09:00 | A | 0 Ko] - D:\java site .txt
+[11/07/2016 - 22:58:57 | N | 31 Ko] - D:\spr-mvc-hib-master.rar
+[21/02/2016 - 20:39:44 | N | 322 Ko] - D:\cours java_jee.pdf
+[27/08/2016 - 18:09:17 | N | 167 Ko] - D:\it acadmey.pdf
+[15/03/2017 - 09:13:58 | AT | 75 Ko] - D:\karama.oxps
+[10/01/2017 - 13:33:05 | SHD] - D:\$RECYCLE.BIN
+[17/05/2016 - 07:10:47 | D] - D:\Env_dev
+[02/06/2016 - 22:25:50 | D] - D:\formation j2ee
+[13/06/2016 - 22:02:59 | D] - D:\java amin
+[10/07/2016 - 18:23:28 | D] - D:\workspace-itacadmey-1
+[12/07/2016 - 18:42:05 | D] - D:\outils developpement de j2ee
+[18/07/2016 - 11:56:00 | D] - D:\j2ee belhassen
+[19/07/2016 - 00:01:54 | D] - D:\cd_elite 1
+[02/08/2016 - 20:10:14 | D] - D:\formation java
+[14/08/2016 - 17:15:04 | D] - D:\java  amin complet
+[16/08/2016 - 08:24:24 | D] - D:\mohamed
+[23/08/2016 - 08:45:54 | D] - D:\Spring
+[25/08/2016 - 16:25:16 | D] - D:\Mohamed Spring
+[21/11/2016 - 23:01:38 | D] - D:\dridi j2ee
+[22/11/2016 - 20:20:27 | D] - D:\formation cifop
+[10/12/2016 - 19:35:24 | D] - D:\spr-mvc-hib-master
+[18/12/2016 - 12:02:31 | D] - D:\cours java+android
+[25/03/2017 - 09:44:44 | D] - D:\dossier cv de mohamed haouali
+[06/05/2017 - 21:23:04 | D] - D:\Cv mohamed 2017
+
+[b]################## | E:\ - Disque Fixe (NTFS) |[/b]
+
+[12/02/2015 - 14:40:03 | N | 0 Ko] - E:\3imada.txt
+[05/12/2013 - 23:01:06 | N | 66 Ko] - E:\invitation symphonie.pdf
+[20/01/2016 - 13:44:24 | A | 11544 Ko] - E:\??? ???? ???? ?? ?????? .. ????? . ? . ????.pdf
+[19/04/2016 - 13:57:43 | N | 522 Ko] - E:\M_Dev_TUNISIA_Cross_platform-Certificat_Cross_Platform_étudiant_673.pdf
+[29/05/2013 - 15:11:14 | N | 174 Ko] - E:\535209_330691483670684_282504206_n.jpg
+[29/05/2013 - 15:13:22 | N | 75 Ko] - E:\179737_329199183819914_877787581_n.jpg
+[12/03/2015 - 10:25:04 | N | 41 Ko] - E:\11009846_10206073462266459_7465462700937930978_n.jpg
+[29/02/2016 - 07:14:55 | N | 89 Ko] - E:\diplome.jpg
+[01/03/2016 - 19:31:43 | N | 8 Ko] - E:\12729250_1293488274000789_1293297021466419115_n.jpg
+[20/01/2017 - 10:20:43 | SHD] - E:\$RECYCLE.BIN
+[09/06/2014 - 14:22:58 | D] - E:\images evenement symfony
+[09/06/2014 - 22:51:08 | D] - E:\vb_time
+[01/01/2015 - 21:09:46 | D] - E:\Soutenance mhmd 2011
+[18/11/2015 - 22:39:46 | D] - E:\tofs de britsh
+[30/11/2015 - 12:23:24 | D] - E:\videos +tofs de fin d'anneés 2014
+[02/04/2016 - 19:28:41 | D] - E:\wassila sud 2015
+[02/04/2016 - 19:30:21 | D] - E:\jerba
+[02/04/2016 - 19:32:54 | D] - E:\ceromonie de diplome 2014
+[10/04/2016 - 21:11:52 | D] - E:\rapports
+[07/05/2016 - 11:41:46 | D] - E:\pfa
+[24/05/2016 - 23:35:29 | D] - E:\cours gl 4
+[24/05/2016 - 23:44:33 | D] - E:\fichiers
+[07/06/2016 - 15:50:46 | D] - E:\mohamed
+[14/06/2016 - 19:58:26 | D] - E:\cours gl 3
+[14/06/2016 - 20:11:23 | D] - E:\soutenance   2014
+[15/06/2016 - 22:36:08 | D] - E:\fichiers importants
+[19/06/2016 - 17:42:22 | D] - E:\jeux
+[29/10/2016 - 09:46:22 | D] - E:\cours gl 5
+[16/12/2016 - 18:23:16 | D] - E:\disque de l'ordinateur
+[16/12/2016 - 22:29:42 | D] - E:\????-?????
+[04/04/2017 - 08:50:53 | D] - E:\kais
+[04/04/2017 - 08:51:56 | D] - E:\flash
+[04/04/2017 - 08:51:56 | D] - E:\symfony
+[04/04/2017 - 08:53:21 | D] - E:\canada
+[16/04/2017 - 11:09:03 | D] - E:\photos
+[27/04/2017 - 13:06:56 | D] - E:\pfe 2014
+[08/05/2017 - 22:22:39 | D] - E:\soulager le dos
+
+[b]################## | F:\ - Disque Fixe (NTFS) |[/b]
+
+[08/04/2016 - 12:20:18 | N | 40350 Ko] - F:\PhoneGap-Desktop-Beta-0.1.1-win.zip
+[12/04/2016 - 09:35:03 | A | 8289 Ko] - F:\Internet Download Manager (IDM) 6.25 Build 14   Crack [TechinCongo.net].zip
+[04/06/2016 - 21:57:39 | N | 362074 Ko] - F:\adt-bundle-windows-x86_64-20140702.zip
+[16/06/2016 - 00:41:55 | N | 3295 Ko] - F:\Stellar Phoenix Windows Data Recovery - Professional.zip
+[09/06/2014 - 23:55:18 | D] - F:\Microsoft.Office.Professionel 2010 FR
+[29/12/2016 - 11:48:54 | A | 570 Ko] - F:\Ingénieur informatique.pdf
+[30/03/2016 - 08:25:14 | N | 39332 Ko] - F:\Brackets.1.6.Extract.msi
+[24/04/2016 - 10:39:39 | N | 2030 Ko] - F:\putty-0.67-installer.msi
+[25/06/2016 - 16:39:55 | N | 15815 Ko] - F:\disk-drill-win.msi
+[22/10/2016 - 17:21:21 | N | 12480 Ko] - F:\node-v6.9.1-x64.msi
+[10/02/2013 - 12:21:54 | N | 37622 Ko] - F:\editix2010-winjre-sp1.exe
+[25/02/2013 - 11:50:38 | N | 119451 Ko] - F:\soapUI-x32-4.5.1.exe
+[15/01/2015 - 18:14:07 | N | 24163 Ko] - F:\vlc-2.1.5-win32.exe
+[30/08/2015 - 10:57:20 | N | 42488 Ko] - F:\wampserver2.5-Apache-2.4.9-Mysql-5.6.17-php5.5.12-64b.exe
+[24/10/2015 - 16:35:19 | N | 1896 Ko] - F:\winrar-x64-521.exe
+[25/10/2015 - 15:47:52 | N | 1824 Ko] - F:\ob_d0937d_zhpcleaner.exe
+[03/11/2015 - 11:15:16 | N | 3107 Ko] - F:\clavierarabe.co.exe
+[09/11/2015 - 18:43:11 | N | 98842 Ko] - F:\ViberSetup.exe
+[27/12/2015 - 15:08:14 | N | 45435 Ko] - F:\spybot-2.4.exe
+[21/02/2016 - 18:23:34 | N | 129241 Ko] - F:\Apache_OpenOffice_4.1.2_Win_x86_install_fr.exe
+[26/02/2016 - 20:49:05 | N | 74066 Ko] - F:\AdbeRdr11010_fr_FR.exe
+[27/02/2016 - 00:47:58 | N | 42144 Ko] - F:\Firefox Setup 44.0.2.exe
+[01/03/2016 - 10:14:55 | N | 45783 Ko] - F:\eclipse-inst-win64.exe
+[17/03/2016 - 10:15:05 | N | 154262 Ko] - F:\WebStorm-11.0.3.exe
+[22/03/2016 - 08:55:37 | N | 252937 Ko] - F:\Justinmind_Prototyper_Windows.exe
+[12/05/2016 - 07:44:43 | N | 935 Ko] - F:\SaveAsPDF.exe
+[15/06/2016 - 17:22:01 | N | 4112 Ko] - F:\npp.6.9.2.Installer.exe
+[15/06/2016 - 17:42:41 | N | 8215 Ko] - F:\Sublime Text Build 3114 x64 Setup.exe
+[26/06/2016 - 20:35:40 | N | 965 Ko] - F:\ChromeSetup.exe
+[27/06/2016 - 00:03:58 | N | 197168 Ko] - F:\avast-antivirus-gratuit-2016_11-1-2253_fr_11113.exe
+[15/07/2016 - 18:08:04 | N | 209 Ko] - F:\vs_community_FRA.exe
+[06/08/2016 - 23:04:58 | N | 912 Ko] - F:\drfone-for-android_setup_full1495.exe
+[22/10/2016 - 17:48:37 | N | 32300 Ko] - F:\Git-2.10.1-64-bit.exe
+[26/12/2016 - 22:09:33 | A | 8136 Ko] - F:\SetupCVitaeV5.exe
+[29/12/2016 - 10:35:21 | A | 42844 Ko] - F:\SkypeSetupFull.exe
+[06/05/2017 - 21:40:22 | A | 3722 Ko] - F:\UsbFix_9.046.exe
+[29/01/2015 - 10:40:19 | N | 1213 Ko] - F:\Orsilver_CDC_Site internet_v0.1.doc
+[03/12/2016 - 17:54:30 | SHD] - F:\$RECYCLE.BIN
+[21/02/2016 - 18:58:30 | D] - F:\OpenOffice 4.1.2 (fr) Installation Files
+[09/06/2014 - 23:58:04 | D] - F:\shortcut_virus_remover_v3.1_
+[09/06/2014 - 23:51:40 | D] - F:\Dreamweaver
+[09/06/2014 - 23:55:57 | D] - F:\office 2007
+[09/06/2014 - 23:57:40 | D] - F:\PowerAMC 15 FR + Patch by momos73
+[15/06/2014 - 14:55:37 | D] - F:\Oracle
+[07/01/2015 - 20:48:26 | D] - F:\asus
+[18/04/2016 - 13:02:55 | D] - F:\vs_2010
+[30/06/2016 - 21:23:25 | D] - F:\environnement d'android m dev
+[26/07/2016 - 17:58:14 | D] - F:\cam studio
+[31/08/2016 - 09:14:42 | D] - F:\netbeans
+[19/09/2016 - 19:51:40 | D] - F:\Dreamweaver8
+[18/01/2017 - 10:07:50 | D] - F:\logiciel wamp
+[18/01/2017 - 12:32:55 | D] - F:\idm
+
+[b]################## | G:\ - Disque Fixe (NTFS) |[/b]
+
+[10/04/2017 - 11:55:16 | A | 351181 Ko] - G:\themeforest-4021469-metronic-responsive-admin-dashboard-template.zip
+[15/04/2017 - 21:07:55 | A | 3900 Ko] - G:\Jobeet.zip
+[15/04/2017 - 21:08:29 | A | 3900 Ko] - G:\OneDrive-2017-04-15.zip
+[29/04/2017 - 10:10:23 | A | 7688 Ko] - G:\Ecommerce-0.2.zip
+[30/01/2017 - 23:35:55 | A | 1 Ko] - G:\notes.txt
+[02/05/2017 - 18:56:23 | A | 3 Ko] - G:\contact.txt
+[30/01/2017 - 23:34:39 | A | 3 Ko] - G:\etudiant.sql
+[15/04/2017 - 21:15:00 | A | 24 Ko] - G:\tnjob.sql
+[15/04/2017 - 06:50:48 | A | 10324 Ko] - G:\rest_api.rar
+[22/04/2017 - 10:34:33 | A | 296 Ko] - G:\backend template.rar
+[27/08/2016 - 11:44:26 | N | 514 Ko] - G:\Programme de Formation PHP5 & Symfony2.pdf
+[29/08/2016 - 15:28:03 | N | 335 Ko] - G:\programme de formation_symphony2.pdf
+[14/09/2016 - 17:00:14 | N | 286 Ko] - G:\prog-symfony.pdf
+[22/09/2016 - 10:41:34 | N | 285 Ko] - G:\Symfony_quick_tour_2.8.pdf
+[04/02/2017 - 15:42:23 | A | 7101 Ko] - G:\PHP 5 Cours et Exercices.pdf
+[25/06/2016 - 17:03:56 | N | 354 Ko] - G:\swiftmailer.docx
+[16/01/2017 - 22:54:57 | SHD] - G:\$RECYCLE.BIN
+[06/05/2017 - 11:22:39 | D] - G:\metronic_v4.7.5
+[10/11/2016 - 00:51:55 | D] - G:\film bootsrap
+[10/11/2016 - 00:51:55 | D] - G:\Html cifop
+[10/11/2016 - 00:51:55 | D] - G:\cifop symfony final
+[08/02/2017 - 09:37:02 | RD] - G:\Gestioninformatique
+[20/02/2017 - 12:00:52 | D] - G:\Nouveau dossier
+[06/03/2017 - 11:08:42 | D] - G:\marwa
+[16/04/2017 - 11:13:28 | D] - G:\rest_api
+[16/04/2017 - 11:13:31 | D] - G:\OCPlatform-master
+[16/04/2017 - 11:14:14 | D] - G:\jobett
+[16/04/2017 - 11:18:46 | D] - G:\one drive
+[26/04/2017 - 07:23:24 | D] - G:\mohamed1
+[02/05/2017 - 19:34:45 | D] - G:\issam
+[02/05/2017 - 19:44:22 | D] - G:\backend template
+[06/05/2017 - 11:50:33 | D] - G:\elhem
+[13/05/2017 - 21:13:43 | D] - G:\Gestion des Films (videos)
+
+[b]################## | I:\ - Disque Fixe (NTFS) |[/b]
+
+[06/11/2016 - 08:30:36 | SHD] - I:\$RECYCLE.BIN
+[17/01/2017 - 19:20:23 | RASH | 8 Ko] - I:\BOOTSECT.BAK
+[18/06/2013 - 13:18:29 | N | 0 Ko] - I:\BOOTNXT
+[05/12/2013 - 21:11:08 | SHD] - I:\Recovery
+[30/10/2015 - 08:09:15 | RASH | 391 Ko] - I:\bootmgr
+[17/01/2017 - 19:20:22 | SHD] - I:\Boot
+
+[b]################## | J:\ - Disque Fixe (NTFS) |[/b]
+
+[10/03/2014 - 09:36:38 | A | 8967 Ko] - J:\videotheque-symfony2.2.1.zip
+[23/12/2013 - 19:03:48 | A | 14327 Ko] - J:\C#.rar
+[15/06/2016 - 22:52:02 | A | 14783 Ko] - J:\formation symfony.rar
+[10/11/2016 - 01:23:16 | D] - J:\gestion.proj
+[15/06/2016 - 22:52:20 | A | 0 Ko] - J:\personneForm.php
+[15/06/2016 - 22:37:58 | A | 371 Ko] - J:\070924version-demarrer_avec_ajax_et_php.pdf
+[15/06/2016 - 22:38:10 | A | 8818 Ko] - J:\14668-concevez-votre-site-web-avec-php-et-mysql.pdf
+[15/06/2016 - 22:52:04 | A | 2073 Ko] - J:\rapport final.pdf
+[25/06/2016 - 17:00:03 | A | 885 Ko] - J:\introduction au web .pdf
+[25/06/2016 - 17:00:04 | A | 8818 Ko] - J:\php.pdf
+[25/06/2016 - 17:00:04 | A | 371 Ko] - J:\exemple d'aplication.pdf
+[25/06/2016 - 17:00:05 | A | 109 Ko] - J:\m dev.pdf
+[25/06/2016 - 17:10:02 | A | 143 Ko] - J:\Cin.pdf
+[25/06/2016 - 17:10:02 | A | 31 Ko] - J:\formulaire.pdf
+[19/07/2016 - 18:00:58 | A | 26666 Ko] - J:\HTML-JS.pdf
+[22/07/2016 - 17:26:00 | A | 42 Ko] - J:\13686656_822296907901517_4981615701529878855_n.jpg
+[06/03/2013 - 12:06:54 | A | 1 Ko] - J:\formulaire.html
+[16/01/2017 - 22:54:58 | SHD] - J:\$RECYCLE.BIN
+[10/11/2016 - 01:01:48 | D] - J:\anis -videos de formation de symfony 2
+[10/11/2016 - 01:02:03 | D] - J:\application phone gap
+[10/11/2016 - 01:02:23 | D] - J:\C#
+[10/11/2016 - 01:02:25 | D] - J:\cours symfony
+[10/11/2016 - 01:07:47 | D] - J:\dossier phone gap
+[10/11/2016 - 01:09:03 | D] - J:\Développez des applications Java avec Spring
+[10/11/2016 - 01:09:48 | D] - J:\esslem
+[10/11/2016 - 01:09:56 | D] - J:\festival
+[10/11/2016 - 01:09:58 | D] - J:\formation
+[10/11/2016 - 01:20:58 | D] - J:\formation de symfony
+[10/11/2016 - 01:22:14 | D] - J:\formation symfony
+[10/11/2016 - 01:23:16 | D] - J:\html 5+jquery
+[10/11/2016 - 01:23:17 | D] - J:\phone gap
+[10/11/2016 - 01:23:19 | D] - J:\php 5
+[10/11/2016 - 01:23:20 | D] - J:\rapport de pfe
+[10/11/2016 - 01:24:09 | D] - J:\Symfony
+[10/11/2016 - 01:38:48 | D] - J:\Symfony 1
+[10/11/2016 - 01:41:20 | D] - J:\videos android
+[10/11/2016 - 09:47:53 | D] - J:\web prof
+[04/12/2016 - 09:59:13 | D] - J:\adobe cs 3
+[08/02/2017 - 09:12:03 | D] - J:\presta shop
+
+[b]Analyse réalisée en 28.69 secondes[/b]
+
+[b]################## | E.O.F | [url=https://www.sosvirus.net/]https://www.sosvirus.net/[/url] | [url=https://www.usb-antivirus.com/fr/]https://www.usb-antivirus.com/fr/[/url] |[/b]

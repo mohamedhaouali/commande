@@ -1,0 +1,102 @@
+{% extends "::Base.html.twig" %}
+   {% block body %}
+ <body>
+<a name="top"></a>
+<div id="wrapper_sec">
+  <!-- Header -->
+  <div id="masthead">
+    <div class="secnd_navi">
+      <ul class="links">
+       {% if app.user %}<span>  Bonjour M(lle) {{ app.user.username }}  |
+                 				
+
+           <a href="{{path('fos_user_security_logout')}}"><span style="color: red">Déconnexion</span></a></span>
+          {% endif %}
+      </ul>
+      <ul class="network">
+            
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <div class="logo"> <a href="index-2.html"><img src="{{ asset('bundles/medbacformation/images/logo.png') }}" alt="" /></a>
+    </div>
+    
+    <div class="clear"></div>
+    <div id="navigation">
+{%block menu%}
+      <ul id="nav" class="dropdown dropdown-linear dropdown-columnar">
+        
+       <li><a href="{{path('_index')}}">Acceuil</a></li>
+       <li><a href="" class="dir">Bijou</a>
+       <ul class="dir">
+       
+       <li class="clear"><a href="{{path('ajout_bijou')}}">Ajout Bijou</a></li>
+                <li class="clear"><a href="{{path('liste_bijou')}}">Liste Des Bijoux</a></li>
+        </ul>
+       
+       </li>
+        <li><a href="" class="dir">Genre</a>
+       <ul class="dir">
+       
+       <li class="clear"><a href="{{path('ajout_genre')}}">Ajout Genre</a></li>
+                <li class="clear"><a href="{{path('liste_genre')}}">Liste Des Genres</a></li>
+        </ul>
+       
+       </li>
+        
+       <li><a href="{{path('_contact')}}">Contact</a></li>
+      
+      </ul>
+       {%endblock%}
+     
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <!-- Banner Section -->
+  
+  <div class="clear"></div>
+  <!--Slider-->
+ 
+  <!--SMALL BANNERS-->
+ 
+  <!-- Scroolling Products -->
+  
+  <div class="content_sec">
+   <div class="cont_top"></div>
+    
+        {%block content%}
+   <div  style=" height:500px" class="cont_center">
+            {% block notice %}
+	<div class="cont_center">
+            <ul class="dir">
+            
+            </ul>
+            </div>
+         {%endblock%}
+      {% block fos_user_content %}
+    {% endblock fos_user_content %} 
+    <div class="clear"></div>
+    </div>
+{%endblock%}
+
+    
+    
+   </div>
+  
+  <div class="clear"></div>
+</div>
+<!-- Footer Section -->
+<div id="footer">
+  <div class="foot_inr">
+    <div class="foot_top">
+      
+    </div><br class="clear" />
+    <p class="allrights_colr"></p>
+    <br />
+  </div>
+</div>
+</body>
+ {% endblock %}
+
+   

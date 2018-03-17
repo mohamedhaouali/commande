@@ -1,0 +1,60 @@
+{% extends "MedBacFormationBundle::layout.html.twig" %}
+{% block stylesheets %}
+ {{ parent() }}
+ <style>
+ #contact_message{
+     width: 450px;
+     max-width: 450px;
+	 height:90px;
+ }
+
+     </style>
+ {% endblock %}
+{%block product%}
+             {% for entity in bijou %}
+              <li> <a href="detail.html"><img src="{{ asset('bundles/medbacformation/bijou/'~entity.path)}}" alt="" width="109" height="101" border="0" /></a>
+               <h6 class="colr">{{entity.titre}} </h6>
+              <div><span>{% for Genre in entity.listeDesGenres %}{% if loop.index > 1 %},
+{% endif %} {{ Genre.libelle }}{% endfor %}</span></div>
+               <p class="price"><h3>{{entity.prix}} Dt</h3></p>
+      
+              </li>
+              {%endfor%} 
+ {%endblock%}
+ 
+{%block content%}
+<div  style=" height:600px" class="cont_center">
+{% block notice %}
+	<div id="templatemo_main">
+            <ul id="social_box">
+             {% for flashMessage in app.session.flashbag.get('message') %}
+
+<div class="success"  >  
+    <p style="color:red"> {{ flashMessage }}</p>
+
+</div> 
+        
+{% endfor %}
+            </ul>
+         {%endblock%}
+                <center> <h2>Espace Contact</h2> </center><br><br>
+   <form id="anis_contact_form "action="{{ path('_contact') }}" method="post" {{ form_enctype(form) }} class="form-horizontal" >
+
+<div class="control-group">
+        {{ form_row(form.name) }}
+ {{ form_row(form.email) }}
+        {{ form_row(form.subject) }}
+        {{ form_row(form.message) }}
+
+        {{ form_rest(form) }}
+  </div>
+        
+<br><br>
+<center><input type="submit" class="btn btn-inverse" value="Envoyer"/>        </fieldset>
+</center>
+   </form> 
+                
+</div>
+               
+{% endblock %}
+ 

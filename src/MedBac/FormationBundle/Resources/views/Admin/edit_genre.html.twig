@@ -1,0 +1,38 @@
+{% extends "MedBacFormationBundle::layout_admin.html.twig" %}
+{%block content%}
+<div  style=" height:600px" class="cont_center">
+{% block notice %}
+	<div id="templatemo_main">
+            <ul id="social_box">
+             {% for flashMessage in app.session.flashbag.get('message') %}
+
+<div class="success"  >  
+    <p style="color:red"> {{ flashMessage }}</p>
+
+</div> 
+        
+{% endfor %}
+            </ul>
+         {%endblock%}
+                <center> <h2>Modification d'un Genre</h2> </center><br><br>
+   
+<form action="{{path('genre_modifier',{ 'id': entities.id })}}" method="post" {{ form_enctype(form) }} class="well-sm">
+  {{form_widget(form._token)}}
+  
+   <a> {{ form_errors(form) }}</a>
+  
+               <div style="text-align: left"class="form-group">
+                {{ form_label(form.libelle,"Libelle du Genre :") }}
+                {{ form_errors(form.libelle) }}
+                {{ form_widget(form.libelle, { 'attr': {'placeholder': "donner un libelle"} }) }}
+                </div>
+              
+              
+       <div>
+       <center> <input type="submit" class="btn btn-primary btn-success pull-right"/>
+       </center></div> 
+     </form>
+
+
+            </div>
+{%endblock%}

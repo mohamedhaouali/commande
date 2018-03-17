@@ -1,0 +1,43 @@
+ 
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_ADMIN
+        ROLE_SUPER_ADMIN: [ROLE_SUPER_ADMIN,ROLE_USERS, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH,SUPERADMIN]
+
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username
+
+    firewalls:
+        main:
+            pattern: ^/
+            form_login:
+                provider: fos_userbundle
+                csrf_provider: form.csrf_provider
+                login_path: fos_user_security_login
+                check_path: fos_user_security_check
+            logout:
+                path:   fos_user_security_logout
+                target: _index
+            anonymous:    true
+        secured_area:
+            pattern:    ^/demo/secured/
+            form_login:
+                check_path: _security_check
+                login_path: _demo_login
+            
+            #anonymous: ~
+            #http_basic:
+            #    realm: "Secured Demo Area"
+
+    access_control:
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/List_Des_Bijoux, role: ["ROLE_ADMIN"] }
+        - { path: ^/admin/new_bijou, role: ["ROLE_SUPER_ADMIN"] }
+        #- { path: ^/Article/ajout, role:["ROLE_ADMIN"] }
+        #- { path: ^/generer_taxe, role: ["ROLE_USERS"] }

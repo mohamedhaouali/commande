@@ -1,0 +1,47 @@
+<?php
+
+namespace MedBac\FormationBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Commande
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="MedBac\FormationBundle\Entity\CommandeRepository")
+ */
+class Commande
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+     /**
+     *@ORM\ManyToOne(targetEntity="MedBac\FormationBundle\Entity\Bijou",inversedBy="Panier",cascade={"persist"})
+     */
+    protected $bijou;
+    /**
+     *@ORM\ManyToOne(targetEntity="MedBac\UserBundle\Entity\User",inversedBy="Panier",cascade={"persist"})
+     */
+    protected $user;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dateCommande", type="string", length=255)
+     */
+    private $dateCommande;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="quantite", type="string", length=255)
+     */
+    private $quantite;
+
+
+    
+}

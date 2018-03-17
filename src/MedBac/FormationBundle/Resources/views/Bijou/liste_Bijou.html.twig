@@ -1,0 +1,81 @@
+{% extends "MedBacFormationBundle::layout.html.twig" %}
+{%block menu%}
+      <ul id="nav" class="dropdown dropdown-linear dropdown-columnar">
+        
+       <li><a href="{{path('_index')}}">Acceuil</a></li>
+              <li><a href="{{path('index1')}}">A propos</a></li>
+       <li  class="selected"><a href="{{path('_index11')}}"class="dir">Bijou</a>
+          <ul class="bordergr big">
+            <li class="dir">
+            <h9>&nbsp;Choisir par genre</h9><br />
+              <ul>
+            <li {% if selected_genre < 1 %}class="selected"{% endif %}><a href="{{ path('_index11') }}">Tous
+        </a>
+            <span class="count"><span style=" color: #d72a18 ">{{ total_nb_films }}</span></span></li>
+   
+
+
+ {% for Genre in Genres %}
+        <li {% if Genre['genre'].id == selected_genre %}class="selected"{% endif %}>
+             <a href="{{ path('_index11', { 'libelle': Genre['genre'].libelle }) }}">
+{{ Genre['genre'].libelle }}</a> 
+                <span class="count" style=" color: #d72a18 "><span>{{ Genre['nbConcernedFilms'] }}</span></span></li>
+    
+
+{% endfor %}      
+              </ul>
+            </li>
+           
+        
+            
+          </ul>
+        </li>
+        {% if app.user %}<li><a href="{{path('panier')}}">Panier</a></li>{% endif %}
+         <li><a href="{{path('search')}}">Rechercher</a></li>
+
+        <li><a href="{{path('_contact')}}">Contact</a></li>
+      
+
+      </ul>
+       {%endblock%}
+
+ {%block product%}
+             {% for entity in bijou %}
+              <li> <a href="detail.html"><img src="{{ asset('bundles/medbacformation/bijou/'~entity.path)}}" alt="" width="109" height="101" border="0" /></a>
+               <h6 class="colr">{{entity.titre}} </h6>
+              <div><span>{% for Genre in entity.listeDesGenres %}{% if loop.index > 1 %},
+{% endif %} {{ Genre.libelle }}{% endfor %}</span></div>
+               <p class="price"><h3>{{entity.prix}} Dt</h3></p>
+      
+              </li>
+              {%endfor%} 
+ {%endblock%}
+{%block content%}
+<div  style=" height:550px" class="cont_center">
+    <center><h2>Listes des Bijoux</h2></center><br>
+ {% for entity in Films.currentPageResults %}
+      <div class="product_bg">
+    <div class="product_content">
+    <a href=""><img src="{{ asset('bundles/medbacformation/bijou/'~entity.path)}}" alt="" width="117" height="115" border="0" class="prodbig1" /></a>
+    <h6>Titre:{{entity.titre}}</h6>
+    <h6>Quantité Restante:{{entity.quantite}}</h6>
+    <h6>Genre:<span>{% for Genre in entity.listeDesGenres %}{% if loop.index > 1 %},
+    {% endif %} {{ Genre.libelle }}{% endfor %}</span>
+    </h6>
+    <a href="{{ path('ajout_panier',{ 'id': entity.id})}}"><img src="{{ asset('bundles/medbacformation/images/panier.jpg') }}" alt="" width="52" height="40" border="0" class="add_to_cart" onclick="return confirm('Voulez-vous ajouter cet article à votre panier ?');" /></a>
+ <h3 class="product_price">{{entity.prix}} Dt</h3>
+    </div>
+    </div>
+                {% else %}  
+        <li>Aucun Bijou trouvé.</li>
+{%endfor%}
+            
+            <div class="pagerfanta pull-right" ><br><br><br><br>
+                <center>{{ pagerfanta(Films,'default_translated') }}</center>
+        </div>
+            </div>  
+        
+        
+        
+ > 
+ {%endblock%}

@@ -1,0 +1,70 @@
+_index:
+    pattern:  /acceuil
+    defaults: { _controller: MedBacFormationBundle:Default:index }	
+index:
+    pattern:  /acceuill
+    defaults: { _controller: MedBacFormationBundle:Default:produit }
+MedBac_interface_admin:
+    path: /admin
+    defaults: { _controller: MedBacFormationBundle:Admin:index}
+ajout_bijou:
+    path: /admin/new_bijou
+    defaults: { _controller: MedBacFormationBundle:Admin:ajout}
+liste_bijou:
+    path: /admin/liste_bijou/{page}
+    defaults: { _controller: MedBacFormationBundle:Admin:liste,page:1}
+bijou_modifier:
+    path: /admin/modifier_bijou/{id}
+    defaults: { _controller: MedBacFormationBundle:Admin:modifier}
+bijou_supprimer:
+    path: /admin/supprimer_bijou/{id}
+    defaults: { _controller: MedBacFormationBundle:Admin:supprimer}
+ajout_genre:
+    path: /admin/new_genre
+    defaults: { _controller: MedBacFormationBundle:Admin:ajoutGenre}
+liste_genre:
+    path: /admin/liste_genre/{page}
+    defaults: { _controller: MedBacFormationBundle:Admin:listeGenre,page:1}
+genre_modifier:
+    path: /admin/modifier_genre/{id}
+    defaults: { _controller: MedBacFormationBundle:Admin:modifierGenre}
+genre_supprimer:
+    path: /admin/supprimer_genre/{id}
+    defaults: { _controller: MedBacFormationBundle:Admin:supprimerGenre}
+_index11:
+    resource: "@MedBacFormationBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /List_Des_Bijoux
+ajout_client:
+    pattern:  /Enregistrement
+    defaults: { _controller: MedBacFormationBundle:Client:ajout }
+ajout_panier:
+    pattern:  /ajout_au_panier/{id}
+    defaults: { _controller: MedBacFormationBundle:Client:newPanier }
+panier:
+    pattern:  /votre_panier/{page}
+    defaults: { _controller: MedBacFormationBundle:Client:listepanier,page:1 }
+panier_supprimer:
+    path: /supprimer_panier/{id}
+    defaults: { _controller: MedBacFormationBundle:Client:supprimer}
+commander:
+    path: /commander_produit/{id}
+    defaults: { _controller: MedBacFormationBundle:Client:commander}
+payement:
+    path: /payement
+    defaults: { _controller: MedBacFormationBundle:Client:payement}
+_contact:
+    pattern:  /contact/
+    defaults: { _controller: MedBacFormationBundle:Default:contact }
+    requirements:
+        _method:  GET|POST 
+recherche:
+    resource: "@MedBacFormationBundle/Controller/ClientController.php"
+    type:     annotation
+    prefix:   /rechercher_bijoux	
+search:
+    path: /rechercher
+    defaults: { _controller: MedBacFormationBundle:Client:recherche}
+index1:
+    pattern:  /apropos
+    defaults: { _controller: MedBacFormationBundle:Default:index1 }

@@ -1,0 +1,25 @@
+{% extends "MedBacFormationBundle::layout.html.twig" %}
+   {% use 'MedBacFormationBundle:Default:sidebar_genres.html.twig' %}
+
+{% block contenu %}
+ 
+ {% for bijou in bijoux %}
+    <div class="fiche-bijou">
+        <img src="{{ asset('bundles/medbacformation/images/templatemo_image_01.png') }}" width="100" height="130" />
+        <div class="bijou-title">genre : <span>{% for genre in bijou.listeDesGenres %}{% if loop.index > 1 %},
+{% endif %} {{ genre.label }}{% endfor %}</span></div>
+        <div class="bijou-title">Title : <span>{{ bijou.titre }}</span></div>
+        <div class="bijou-description">Description : <span>{{ bijou.description }}</span></div>
+     
+    </div>
+    
+    {% else %}<div class="alert">Désolé, il n'y a aucun bijou dans cette section</div>
+  
+    {% endfor %}   
+            {{ pagerfanta(bijoux, 'twitter_bootstrap3_translated') }}
+
+                     {% endblock %}
+      
+
+                    
+                    

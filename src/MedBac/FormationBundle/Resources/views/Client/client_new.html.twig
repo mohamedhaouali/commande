@@ -1,0 +1,74 @@
+{% extends "MedBacFormationBundle::layout.html.twig" %}
+ 
+
+ {%block product%}
+             {% for entity in bijou %}
+              <li> <a href="detail.html"><img src="{{ asset('bundles/medbacformation/bijou/'~entity.path)}}" alt="" width="109" height="101" border="0" /></a>
+               <h6 class="colr">{{entity.titre}} </h6>
+              <div><span>{% for Genre in entity.listeDesGenres %}{% if loop.index > 1 %},
+{% endif %} {{ Genre.libelle }}{% endfor %}</span></div>
+               <p class="price"><h3>{{entity.prix}} Dt</h3></p>
+      
+              </li>
+              {%endfor%} 
+ {%endblock%}
+{%block content%}
+<div  style=" height:650px" class="cont_center">
+    <center><h2>Enregistrement</h2></center><br>
+    
+    <form action="{{ path('ajout_client') }}" method="post" {{ form_enctype(form) }} class="well-sm">
+  {{form_widget(form._token)}}
+  
+   <a class="add-link"> {{ form_errors(form) }}</a>
+           <center> 
+  
+        <div style="text-align: left" class="form-group" >
+        {{ form_label(form.nom,'Nom :') }}
+        {{ form_errors(form.nom) }}
+        {{ form_widget(form.nom, { 'attr': {'placeholder': "entrer votre nom"} }) }}
+        </div>
+       
+        <div style="text-align: left" class="form-group">
+        {{ form_label(form.prenom,'Prenom :') }}
+        {{ form_errors(form.prenom) }}
+        {{ form_widget(form.prenom, { 'attr': {'placeholder': "entrer votre prenom"} }) }}
+         </div>
+         <div style="text-align: left" class="form-group">
+        {{ form_label(form.telephone,'Telephone :') }}
+        {{ form_errors(form.telephone) }}
+        {{ form_widget(form.telephone, { 'attr': {'placeholder': "donner votre telephone"} }) }}
+         </div>
+         <div style="text-align: left" class="form-group">
+         {{ form_label(form.adresse,'Adresse') }}
+         {{ form_errors(form.adresse) }}
+        {{ form_widget(form.adresse, { 'attr': {'placeholder': "donner votre adresse"} }) }}
+         </div>
+          
+        <div style="text-align: left" class="form-group">
+        {{ form_label(form.user.email,'Adresse e-mail :') }}
+        {{ form_errors(form.user.email) }}
+        {{ form_widget(form.user.email, { 'attr': {'placeholder': "donner votre email"} }) }}
+         </div>
+        <div style="text-align: left" class="form-group">
+        {{ form_label(form.user.username,"Login : ")}}
+        {{ form_errors(form.user.username) }}
+        {{ form_widget(form.user.username, { 'attr': {'placeholder': "donner un nom d'utlisation"} }) }}
+         </div>
+        <div style="text-align: left" class="form-group">
+        {{ form_label(form.user.plainPassword," ")}}
+        {{ form_errors(form.user.plainPassword) }}
+        {{ form_widget(form.user.plainPassword, { 'attr': {'placeholder': "donner un nom d'utlisation"} }) }}
+         </div>
+          </center>
+             <center> <input type="submit" class="btn btn-info btn-large" value="s'inscrire" />
+             </center>
+                   </form>
+    
+    
+    
+            </div>  
+        
+        
+        
+  
+ {%endblock%}

@@ -1,0 +1,38 @@
+{% extends "MedBacFormationBundle::layout_admin.html.twig" %}
+{%block content%}
+<div  style=" height:600px" class="cont_center">
+{% block notice %}
+	<div id="templatemo_main">
+            <ul>
+             {% for flashMessage in app.session.flashbag.get('message') %}
+
+<div class="success"  >  
+    <p style="color:red"> {{ flashMessage }}</p>
+
+</div> 
+        
+{% endfor %}
+            </ul>
+         {%endblock%}
+                <center> <h2>Liste des Bijoux</h2> </center><br><br>
+ 
+ {% for entity in bijou.currentPageResults %}
+<div class="product_bg">
+    <div class="product_content">
+    <a href=""><img src="{{ asset('bundles/medbacformation/bijou/'~entity.path)}}" alt="" width="117" height="115" border="0" class="prodbig1" /></a>
+    <h6>Tittre:{{entity.titre}}</h6>
+    <h6>Quantité:{{entity.quantite}}</h6>
+    <a href="{{path('bijou_modifier',{ 'id': entity.id })}}"><img src="{{ asset('bundles/medbacformation/images/modifier.gif') }}" alt="" width="52" height="26" border="0" class="add_to_cart" /></a>
+       <a href="{{path('bijou_supprimer',{ 'id': entity.id })}}"><img src="{{ asset('bundles/medbacformation/images/c7.png') }}" alt="" width="42" height="26" border="0" class="add_to_cart" onclick="return confirm('Etes vous sur de vouloir supprimer cet Bijou ?');" /></a>
+<h3 class="product_price">{{entity.prix}} Dt</h3>
+    </div>
+    </div>
+                {% else %}
+        <li>Aucun Bijou trouvé.</li>
+{%endfor%}
+            
+            <div class="pagerfanta pull-right" ><br><br><br><br>
+                <center>{{ pagerfanta(bijou,'default_translated') }}</center>
+        </div>
+            </div>
+{%endblock%}

@@ -1,0 +1,42 @@
+ {%  extends "::Base.html.twig"%}
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/medbacformation/css/reset.css') }}" />
+       <link rel="stylesheet" type="text/css" href="{{ asset('bundles/medbacformation/css/structure.css') }}" />
+
+{%endblock%}
+       
+       {% block body %}
+   <body> 
+       
+{% block fos_user_content %}{% trans_default_domain 'FOSUserBundle' %}
+ 
+ 
+<form class="box login" action="{{ path("fos_user_security_check") }}" method="post">
+   <fieldset class="boxBody"> 
+    {% if error %}
+    <div style="text-align: left; color: red ">{{ error|trans }}</div>
+{% endif %}
+       <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+    <label for="username">{{ 'security.login.username'|trans }}</label>
+    <input placeholder="entrer votre login" tabindex="1" type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+
+    <label for="password">{{ 'security.login.password'|trans }}</label>
+    <input placeholder="entrer votre mot de passe" tabindex="2" type="password" id="password" name="_password" required="required" />
+       <div style="text-align: left ">
+    <input  type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+       
+       </div>
+    </fieldset>
+        <footer>
+      
+            <center><input class="btnLogin" tabindex="4" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" /> <a href="{{ path("ajout_client") }}">ou S'inscrire</a><br>
+    
+    </center></footer>
+    </form>
+    
+{% endblock fos_user_content %}
+       </body>
+ {% endblock %}
+    

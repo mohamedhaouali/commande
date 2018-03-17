@@ -1,0 +1,107 @@
+{% extends "::Base.html.twig" %}
+   {% block body %}
+ <body>
+<a name="top"></a>
+<div id="wrapper_sec">
+  <!-- Header -->
+  <div id="masthead">
+    <div class="secnd_navi">
+      <ul class="links">
+       {% if app.user %}<span>  Bonjour M(lle) {{ app.user.username }}  |
+                 				
+
+           <a href="{{path('fos_user_security_logout')}}"><span style="color: red">Déconnexion</span></a></span>
+          {% endif %}
+      </ul>
+      <ul class="network">
+            
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <div class="logo"> <a href=""><img src="{{ asset('bundles/medbacformation/images/logo.png') }}" alt="" /></a>
+    </div>
+   
+    <div class="clear"></div>
+    <div id="navigation">
+{%block menu%}
+      <ul id="nav" class="dropdown dropdown-linear dropdown-columnar">
+        
+       <li><a href="{{path('_index')}}">Acceuil</a></li>
+       <li><a href="{{path('index1')}}">A propos</a></li>
+       <li  class="selected"><a href="{{path('_index11')}}"class="dir">Bijou</a>
+          
+        </li>
+             {% if app.user %}<li><a href="{{path('panier')}}">Panier</a></li>{% endif %}
+
+     <li><a href="{{path('_contact')}}">Contact</a></li>
+     <li><a href="{{path('search')}}">Rechercher</a></li>
+     <li><a href="{{path('ajout_bijou')}}">Administration</a></li>
+       </ul>
+       {%endblock%}
+     
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <!-- Banner Section -->
+  <div id="banner">
+    <div id="slider4" class="nivoSlider"> <a href="#"><img src="{{ asset('bundles/medbacformation/images/banniere_trustpilot_big_opti.jpg') }}" alt="" /></a> <a href="#"><img src="{{ asset('bundles/medbacformation/images/e__te__sonechaude-1.png') }}" alt="" /></a> <a href="#"><img src="{{ asset('bundles/medbacformation/images/fdm2014.jpg') }}" alt="" /></a> <a href="#"><img src="{{ asset('bundles/medbacformation/images/soldes.png') }}" alt="" /></a> </div>
+    <script type="text/javascript" src="{{ asset('bundles/medbacformation/js/jquery.nivo.slider.pack.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/medbacformation/js/nivo.js') }}"></script>
+  </div>
+  <div class="clear"></div>
+  <!--Slider-->
+  <div class="product_slider">
+  <div id="prod_scroller"> <a href="javascript:void(null)" class="prev">&nbsp;</a>
+          <div class="anyClass scrol">
+             <ul>
+   {%block product%}
+               
+ {%endblock%}
+            </ul>
+          </div>
+          <a href="javascript:void(null)" class="next">&nbsp;</a> </div>
+  </div>
+  <!--SMALL BANNERS-->
+ 
+  <!-- Scroolling Products -->
+  
+  <div class="content_sec">
+   <div class="cont_top"></div>
+    
+        {%block content%}
+   <div  style=" height:500px" class="cont_center">
+            {% block notice %}
+	<div class="cont_center">
+            <ul class="dir">
+            
+            </ul>
+            </div>
+         {%endblock%}
+      {% block fos_user_content %}
+    {% endblock fos_user_content %}
+           <div class="clear"></div>
+    </div>
+    {%endblock%}
+
+    
+    
+     
+  </div>
+  
+  <div class="clear"></div>
+</div>
+<!-- Footer Section -->
+<div id="footer">
+  <div class="foot_inr">
+    <div class="foot_top">
+      
+    </div><br class="clear" />
+    <p class="allrights_colr"></p>
+    <br />
+  </div>
+</div>
+</body>
+ {% endblock %}
+
+   
